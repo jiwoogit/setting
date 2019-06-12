@@ -1,0 +1,11 @@
+set number
+set ai
+set si
+set cindent
+set tabstop=4
+set ignorecase
+set expandtab
+set background=dark
+set nocompatible
+set showmatch
+syntax on
