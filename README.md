@@ -17,3 +17,11 @@
 4. Install bundles. Launch vim(ignore the errors and they will disappear after installing needed plugins)and run:
 
         :BundleInstall
+
+## Software
+
+1. Chrome Plugin "Vimium"
+
+2. z Program
+
+3. iTerm, zsh
