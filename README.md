@@ -18,6 +18,13 @@
 
         :BundleInstall
 
+## zsh customizing
+
+1. Install zsh Plugins(zsh-autosuggestions, zsh-syntax-highlighting)
+
+        git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
 ## Software
 
 1. Chrome Plugin "Vimium"
