@@ -100,15 +100,6 @@ let g:rbpt_colorpairs = [
 let g:rbpt_max = 16
 autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 
-" tabbar
-let g:Tb_MaxSize = 2
-let g:Tb_TabWrap = 1
-
-hi Tb_Normal guifg=white ctermfg=white
-hi Tb_Changed guifg=green ctermfg=green
-hi Tb_VisibleNormal ctermbg=252 ctermfg=235
-hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
-
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
 
@@ -212,7 +203,7 @@ nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
 
 let g:indentguides_spacechar = '┆'
-let g:indentguides_tabchar = '|'
+let g:indentguides_tabchar = '   |'
 
 "------------------
 " Useful Functions
