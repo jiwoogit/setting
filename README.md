@@ -55,6 +55,28 @@ prompt_context() {
 }
 ~~~
 
+### zsh-autosuggestions
+
+1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
+
+    ```sh
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    ```
+
+2. Add the plugin to the list of plugins for Oh My Zsh to load (inside `~/.zshrc`):
+
+    ```sh
+    plugins=(zsh-autosuggestions)
+    ```
+
+    ```sh
+    plugins=(
+            git
+            z
+            zsh-autosuggestions
+    )
+    ```
+
 ## Software
 
 1. Chrome Plugin "Vimium"
