@@ -25,10 +25,27 @@
         git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
+## brew install z
+1. Install z(mac)
+
+        brew update
+        brew install z
+
+2. add z in shell program
+
+       vim ~/.zshrc
+
+3. add this line (or just add z)
+
+        plugins=(
+                git
+                z
+        )
+
+4. save
+
 ## Software
 
 1. Chrome Plugin "Vimium"
 
-2. z Program
-
-3. iTerm, zsh
+2. iTerm, zsh
