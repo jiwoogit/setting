@@ -47,15 +47,15 @@
 ## remove computer name in ZSH
 
 1. add this code in `~/.zshrc`
-~~~
-prompt_context() {
-    if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-        prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-    fi
-}
-~~~
+    ```sh
+    prompt_context() {
+        if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+            prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+        fi
+    }
+    ```
 
-### zsh-autosuggestions
+## zsh-autosuggestions
 
 1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
 
