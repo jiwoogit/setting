@@ -23,10 +23,11 @@
         cd ~/.vim/bundle/youcompleteme
         ./install.py
         
-It can be helpful
-
-        sudo apt install cmake #linux
-        brew install cmake #MAC
+        # It can be helpful
+        # Linux
+        sudo apt install cmake
+        # MAC
+        brew install cmake
 
 ## zsh customizing
 
