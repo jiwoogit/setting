@@ -18,6 +18,16 @@
 
         :BundleInstall
 
+5. Compile YouCompleteMe PlugIn
+
+        cd ~/.vim/bundle/youcompleteme
+        ./install.py
+        
+It can be helpful
+
+        sudo apt install cmake #linux
+        brew install cmake #MAC
+
 ## zsh customizing
 
 1. Install zsh Plugins(zsh-autosuggestions, zsh-syntax-highlighting)
