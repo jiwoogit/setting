@@ -1,5 +1,8 @@
 source ~/.vim/bundles.vim
 
+set langmenu=en_US
+let $LANG = 'en_US'
+
 " encoding dectection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 
@@ -8,8 +11,7 @@ filetype plugin indent on
 
 " enable syntax hightlight and completion
 syntax on
-let mapleader = ','
-imap jk <Esc>
+let mapleader = ","
 
 "--------
 " Vim UI
@@ -18,15 +20,9 @@ imap jk <Esc>
 set background=dark
 "color solarized
 
-" highlight current line
-"au WinLeave * set nocursorline nocursorcolumn
-"au WinEnter * set cursorline cursorcolumn
-"set cursorline cursorcolumn
-set clipboard=unnamed
-
 " search
 set incsearch
-"set highlight 	" conflict with highlight current line
+" set highlight 	" conflict with highlight current line
 set ignorecase
 set smartcase
 
@@ -46,24 +42,26 @@ set showmatch                                                     " show matchin
 set showcmd                                                       " show typed command in status bar
 set title                                                         " show file in titlebar
 set laststatus=2                                                  " use 2 lines for the status bar
+map <S-CR> <ESC>o
+map! <S-CR> <ESC>o
 set matchtime=2                                                   " show matching bracket for 0.2 seconds
-set matchpairs+=<:>                                               " specially for html
+"set matchpairs+=<:>                                               " specially for html
 " set relativenumber
 
 " Default Indentation
 set autoindent
+set cindent
 set smartindent     " indent when
 set tabstop=4       " tab width
 set softtabstop=4   " backspace
 set shiftwidth=4    " indent width
 " set textwidth=79
-" set smarttab
+set smarttab
 set expandtab       " expand tab to space
 
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
-autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
@@ -78,27 +76,15 @@ let g:html_indent_style1 = "inc"
 "-----------------
 " Plugin settings
 "-----------------
-" Rainbow parentheses for Lisp and variants
-let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
-let g:rbpt_max = 16
-autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
+
+" tabbar
+let g:Tb_MaxSize = 2
+let g:Tb_TabWrap = 1
+
+hi Tb_Normal guifg=white ctermfg=white
+hi Tb_Changed guifg=green ctermfg=green
+hi Tb_VisibleNormal ctermbg=252 ctermfg=235
+hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader>'
@@ -109,39 +95,14 @@ let g:tagbar_width=30
 let g:tagbar_autofocus = 1
 let g:tagbar_sort = 0
 let g:tagbar_compact = 1
-" tag for coffee
-if executable('coffeetags')
-  let g:tagbar_type_coffee = {
-        \ 'ctagsbin' : 'coffeetags',
-        \ 'ctagsargs' : '',
-        \ 'kinds' : [
-        \ 'f:functions',
-        \ 'o:object',
-        \ ],
-        \ 'sro' : ".",
-        \ 'kind2scope' : {
-        \ 'f' : 'object',
-        \ 'o' : 'object',
-        \ }
-        \ }
-
-  let g:tagbar_type_markdown = {
-    \ 'ctagstype' : 'markdown',
-    \ 'sort' : 0,
-    \ 'kinds' : [
-        \ 'h:sections'
-    \ ]
-    \ }
-endif
 
 " Nerd Tree
 let NERDChristmasTree=0
-let NERDTreeWinSize=40
+let NERDTreeWinSize=30
 let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 " let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 let NERDTreeShowBookmarks=1
-"let NERDTreeWinPos = "right"
 let NERDTreeWinPos = "left"
 
 " nerdcommenter
@@ -152,23 +113,23 @@ let NERDCompactSexyComs=1
 " ZenCoding
 let g:user_emmet_expandabbr_key='<C-j>'
 
-" powerline
-" let g:Powerline_symbols = 'fancy'
-
 " NeoComplCache
-let g:neocomplcache_enable_at_startup=1
-let g:neoComplcache_disableautocomplete=1
-"let g:neocomplcache_enable_underbar_completion = 1
-"let g:neocomplcache_enable_camel_case_completion = 1
-"let g:neocomplcache_enable_smart_case=1
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-set completeopt-=preview
-
-imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
-smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
+" let g:neocomplcache_enable_at_startup=1
+" inoremap <expr> <C-h> neocomplcache#close_popup()
+" let g:neoComplcache_disableautocomplete=1
+" let g:neocomplcache_enable_smart_case=1
+" let g:neocomplcache_min_syntax_length = 3
+" let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+" if !exists('g:loaded_neocomplcache')
+"     inoremap <expr> <C-h> neocomplcache#smart_close_popup()
+"     inoremap <expr> <BS>  neocomplcache#smart_close_popup()."\<C-h>"
+" endif
+" set completeopt-=preview
+" 
+" imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
+" smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
+" imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
+" smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -182,7 +143,7 @@ endif
 let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 
 " SuperTab
-" let g:SuperTabDefultCompletionType='context'
+let g:SuperTabDefultCompletionType='context'
 let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
 let g:SuperTabRetainCompletionType=2
 
@@ -193,17 +154,14 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 " Keybindings for plugin toggle
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
-nmap <F5> :TagbarToggle<cr>
-"nmap <F6> :NERDTreeToggle<cr>
-map <Leader>ne :NERDTreeToggle<cr>
+"nmap <F5> :TagbarToggle<cr>
+nmap <leader>ne :NERDTreeToggle<cr>
+nmap <F6> :NERDTreeToggle<cr>
 nmap <F3> :GundoToggle<cr>
 nmap <F4> :IndentGuidesToggle<cr>
 nmap  <D-/> :
 nnoremap <leader>a :Ack
 nnoremap <leader>v V`]
-
-let g:indentguides_spacechar = '┆'
-let g:indentguides_tabchar = '   |'
 
 "------------------
 " Useful Functions
@@ -234,6 +192,7 @@ nmap <D-]> >>
 nmap <D-[> <<
 vmap <D-[> <gv
 vmap <D-]> >gv
+inoremap jk <esc>
 
 " eggcache vim
 nnoremap ; :
@@ -252,8 +211,8 @@ if has("gui_running")
     set showtabline=2
     set columns=140
     set lines=40
-"    noremap <D-M-Left> :tabprevious<cr>
-"    noremap <D-M-Right> :tabnext<cr>
+    noremap <D-M-Left> :tabprevious<cr>
+    noremap <D-M-Right> :tabnext<cr>
     map <D-1> 1gt
     map <D-2> 2gt
     map <D-3> 3gt
@@ -265,3 +224,6 @@ if has("gui_running")
     map <D-9> 9gt
     map <D-0> :tablast<CR>
 endif
+
+"ctags networkproject
+set tags=/Users/jeongjiwoo/Desktop/np/ns-allinone-3.29/ns-3.29/src/tags
