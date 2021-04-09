@@ -224,6 +224,3 @@ if has("gui_running")
     map <D-9> 9gt
     map <D-0> :tablast<CR>
 endif
-
-"ctags networkproject
-set tags=/Users/jeongjiwoo/Desktop/np/ns-allinone-3.29/ns-3.29/src/tags
