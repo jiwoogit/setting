@@ -42,7 +42,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic'
 
 "-------------
 " Other Utils
