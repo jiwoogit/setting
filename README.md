@@ -94,28 +94,28 @@
 ## Installation
 
 1. Backup your old vim configuration files:
-```sh
-        mv ~/.vim ~/.vim.orig
-        mv ~/.vimrc ~/.vimrc.orig
-```
+    ```sh
+    mv ~/.vim ~/.vim.orig
+    mv ~/.vimrc ~/.vimrc.orig
+    ```
 
 2. Clone and install this repo:
-```sh
-        git clone git://github.com/wldn0202/setting.git ~/.vim
-        ln -s ~/.vim/vimrc-linux ~/.vimrc
-```
+    ```sh
+    git clone git://github.com/wldn0202/setting.git ~/.vim
+    ln -s ~/.vim/vimrc-linux ~/.vimrc
+    ```
 
 3. Setup `Vundle`:
-```sh
-        git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-```sh
+    ```sh
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    ```
 
 4. Install Plug Plugin
     refer in [vim-plug](https://github.com/junegunn/vim-plug/blob/master/README.md)
-```sh
+    ```sh
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
+    ```
 
 5. Install bundles. Launch vim(ignore the errors and they will disappear after installing needed plugins and run:
 
@@ -127,9 +127,9 @@
 
 1. Install zsh Plugins(zsh-autosuggestions, zsh-syntax-highlighting)
 
-```sh
-        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-```
+    ```sh
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+    ```
 
 ## Install z
     (TODO)
