@@ -1,3 +1,4 @@
+# MAC setting
 ## Installation
 
 1. Backup your old vim configuration files:
@@ -22,11 +23,6 @@
 
         cd ~/.vim/bundle/youcompleteme
         ./install.py
-        
-        # It can be helpful
-        # Linux
-        sudo apt install cmake
-        # MAC
         brew install cmake
 
 ## zsh customizing
@@ -93,3 +89,63 @@
 1. Chrome Plugin "Vimium"
 
 2. iTerm, zsh
+
+# Linux
+## Installation
+
+1. Backup your old vim configuration files:
+```sh
+        mv ~/.vim ~/.vim.orig
+        mv ~/.vimrc ~/.vimrc.orig
+```
+
+2. Clone and install this repo:
+```sh
+        git clone git://github.com/wldn0202/setting.git ~/.vim
+        ln -s ~/.vim/vimrc-linux ~/.vimrc
+```
+
+3. Setup `Vundle`:
+```sh
+        git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```sh
+
+4. Install Plug Plugin
+    refer in [vim-plug](https://github.com/junegunn/vim-plug/blob/master/README.md)
+```sh
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+5. Install bundles. Launch vim(ignore the errors and they will disappear after installing needed plugins and run:
+
+        :BundleInstall
+
+        
+
+## zsh customizing
+
+1. Install zsh Plugins(zsh-autosuggestions, zsh-syntax-highlighting)
+
+```sh
+        git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+```
+
+## Install z
+    (TODO)
+
+## zsh-autosuggestions
+
+1. Clone this repository into `$ZSH_CUSTOM/plugins` (by default `~/.oh-my-zsh/custom/plugins`)
+
+    ```sh
+    cd ~
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+    echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+    ```
+
+## Software
+
+1. Chrome Plugin "Vimium"
+2. zsh, oh-my-zsh, terminator
+3. Albert
