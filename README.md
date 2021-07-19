@@ -117,10 +117,17 @@
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     ```
 
-5. Install bundles. Launch vim(ignore the errors and they will disappear after installing needed plugins and run:
+5. Install bundles. Launch vim(ignore the errors and they will disappear after installing needed plugins and run:)
 
         :BundleInstall
+        :PlugInstall
 
+5-1. Install YouCompleteMe Plugin
+
+    ```sh
+    # if it doesn't work, please change python3 to python3
+    python3 ~/.vim/plugged/YouCompleteMe/install.py
+    ```
         
 
 ## zsh customizing
