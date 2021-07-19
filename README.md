@@ -111,7 +111,9 @@
     ```
 
 4. Install Plug Plugin
+
     refer in [vim-plug](https://github.com/junegunn/vim-plug/blob/master/README.md)
+
     ```sh
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -122,10 +124,11 @@
         :BundleInstall
         :PlugInstall
 
-5-1. Install YouCompleteMe Plugin
+6. Install YouCompleteMe Plugin (Optional)
+
+   *if it doesn't work, please change python3 to python3*
 
     ```sh
-    # if it doesn't work, please change python3 to python3
     python3 ~/.vim/plugged/YouCompleteMe/install.py
     ```
         
@@ -139,11 +142,11 @@
     ```
 
 ## Install z
-    ```sh
-    # Download to latest to home dir
+
+  *Download to latest to home dir*
+   
     wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh
     echo . ~/z.sh >> ~/.zshrc
-    ```
 
 ## zsh-autosuggestions
 
