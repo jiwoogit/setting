@@ -163,3 +163,4 @@
 1. Chrome Plugin "Vimium"
 2. zsh, oh-my-zsh, terminator
 3. Albert
+4. z (jump-around) 설치 https://github.com/rupa/z/tree/master 참고
